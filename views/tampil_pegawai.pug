@@ -1,0 +1,26 @@
+extends layout
+
+block content
+ 
+  .container
+     a.btn.btn-info.mt-5.mb-3(href='/tambah_data/') Tambah
+     table.table.mt-3#dataTable
+      thead
+        tr
+          th(scope='col') No
+          th(scope='col') NIP
+          th(scope='col') Nama Pegawai
+          th(scope='col') Jabatan
+          th(scope='col') Action
+      tbody
+        - var n = 1;
+        each row, i in items
+         tr 
+          td #{n++}
+          td #{row.nip}
+          td #{row.nama}
+          td #{row.jabatan}
+          td 
+           a.btn.btn-primary.mr-1(href='/pegawai/edit/'+row._id) Edit  
+           a.btn.btn-danger.delete-article(href='#',data-id=row._id ) Delete
+        

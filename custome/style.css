@@ -1,0 +1,28 @@
+.jumbotron {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 654px;
+    margin-bottom: 0rem;
+    text-align: center;
+    color: white;
+
+}
+
+.jumbotron .display-4 {
+    margin-top: 150px;
+    font-size: 62px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+.jumbotron .display-4 span,
+p span {
+    font-weight: 500;
+}
+
+.jumbotron p {
+    font-size: 44px;
+}

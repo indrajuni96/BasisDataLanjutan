@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5d0a4359b36f590cb46bde83"},"nama":"Andre","jabatan":"Operator","__v":0,"nip":2019230001}
+{"_id":{"$oid":"5d0a4fe9a1e0602544bca6b2"},"nip":20021,"nama":"Budi","jabatan":"Supervisor","__v":0}
+{"_id":{"$oid":"5d0b07f1e11b062c70a1fd16"},"nip":2016230078,"nama":"Putri","jabatan":"Staff","__v":0}
+{"_id":{"$oid":"5d15caf930bef91e18f0aeb1"},"nip":2019230085,"nama":"aldy","jabatan":"Operator","__v":0}

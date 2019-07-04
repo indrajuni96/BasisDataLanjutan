@@ -1,0 +1,30 @@
+extends layout
+
+block content
+   .container.mt-5
+     .card
+        .card-header.bg-primary.text-white
+            | 
+            h5 Tambah Penialain 
+        .card-body
+          form(method='POST', action='/tambah_nilai/proses')
+            .form-group
+                label(for='nama') Nama Pegawai
+                select.form-control(name='nama')
+                    option(value='') --Pilih--                        
+                    each row in items
+                      option(value = row.nama ) #{row.nama}      
+            .form-group
+                label(for='nTeknik') Nilai Teknik & Skill
+                input#nTeknik.form-control(type='text' name='nTeknik' placeholder='Nilai Teknik & Skill')
+            .form-group
+                label(for='nPersonality') Nilai Personality
+                input#nPersonality.form-control(type='text' name='nPersonality' placeholder='Nilai Personality')
+            .form-group
+                label(for='nAbsen') Nilai Absen
+                input#nAbsen.form-control(type='text' name='nAbsen' placeholder='Nilai Absen')
+            .form-group
+                label(for='nSanksi') Nilai Sanksi
+                input#nSanksi.form-control(type='text' name='nSanksi' placeholder='Nilai Sanksi')
+            input.btn.btn-primary.mr-1(type='submit',value='Submit') 
+            a.btn.btn-info(href='/pegawai/tampil') Kembali  

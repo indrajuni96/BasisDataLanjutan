@@ -1,0 +1,28 @@
+extends layout
+
+block content
+   .container.mt-5
+     .card
+        .card-header.bg-primary.text-white
+            | 
+            h5 Tambah Pegawai
+        .card-body
+          form(method='POST', action='/tambah_data/proses')
+            .form-group
+                label(for='nip') Nip
+                input#nip.form-control(type='text' name='nip' placeholder='Nip')
+            .form-group
+                label(for='nama') Nama Pegawai
+                input#nama.form-control(type='text' name='nama' placeholder='Nama Pegawai')         
+            .form-group
+                label(for='jabatan') Jabatan
+                select.form-control(name='jabatan')
+                    option(value='') --Pilih--
+                    option(value='Staff') Staff
+                    option(value='Operator') Operator
+                    option(value='Direktur') Direktur
+                    option(value='Supervisor') Supervisor
+            input.btn.btn-primary.mr-1(type='submit',value='Submit') 
+            a.btn.btn-info(href='/pegawai/tampil') Kembali
+
+    

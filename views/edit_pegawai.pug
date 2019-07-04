@@ -1,0 +1,29 @@
+extends layout
+
+block content
+   
+   .container.mt-5
+     .card
+        .card-header.bg-primary.text-white
+            | 
+            h5 Edit Data Pegawai
+        .card-body
+          form(method='POST', action='/pegawai/edit_proses/'+items._id)
+            .form-group
+                label(for='nim') NIP
+                input#nim.form-control(type='text' name='nip' placeholder='NIP' value=items.nip)
+            .form-group
+                label(for='nama') Nama Pegawai
+                input#nama.form-control(type='text' name='nama' placeholder='Nama Pegawai' value=items.nama)
+            .form-group
+                label(for='jabatan') Jabatan
+                select.form-control(name='jabatan')
+                    option(value='') --Pilih--
+                    option(value='Staff',   selected=items.jabatan == 'Staff' ? true : false) Staff
+                    option(value='Operator',selected= items.jabatan == 'Operator') Operator
+                    option(value='Direktur',selected= items.jabatan == 'Direktur') Direktur
+                    option(value='Supervisor',selected= items.jabatan == 'Supervisor') Supervisor
+            input.btn.btn-primary.mr-1(type='submit',value='Submit')
+            a.btn.btn-info(href='/pegawai/tampil') Kembali
+
+    

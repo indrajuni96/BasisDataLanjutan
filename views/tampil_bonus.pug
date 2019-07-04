@@ -1,0 +1,24 @@
+extends layout
+
+block content
+ 
+  .container
+     .alert.alert-success.mt-5(role='alert')
+      | Bonus, di dapat dari 15 kurang Sanksi
+     table.table.mt-3
+      thead
+        tr
+          th(scope='col') No
+          th(scope='col') Nama Pegawai
+          th(scope='col') Keterangan
+          th(scope='col') Akreditas
+          th(scope='col') Bonus
+      tbody
+        - var n = 1;
+        each row, i in items
+         tr 
+          td #{n++}
+          td #{row.nama}
+          td Baik
+          td A
+          td Rp 1.000.000

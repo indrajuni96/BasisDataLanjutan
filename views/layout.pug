@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title #{title}
+    link(rel='stylesheet' href='/css/bootstrap.css')
+    link(rel='stylesheet' href='/style.css')   
+    link(rel='stylesheet' href='/css/jquery.dataTables.min.css')  
+    
+  body
+    // Navigation
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container
+      a.navbar-brand(href='#') Start Bootstrap
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/pegawai/tampil') Data Pegawai
+          li.nav-item
+            a.nav-link(href='/penilaian/tampil') Penilaian
+          li.nav-item
+            a.nav-link(href='/bonus/tampil') Bonus
+          
+  block content
+
+script(src='/js/jquery.js')
+script(src='/js/bootstrap.js')
+script(src='/sweetalert.min.js')
+script(src='/main.js')
+script(src='/js/jquery.dataTables.min.js')
